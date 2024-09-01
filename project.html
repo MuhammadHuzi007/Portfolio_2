@@ -1,0 +1,184 @@
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="media.css">
+   <title>Portfolio</title>
+   <script>
+
+    // script.js
+  
+  document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.dropbtn').addEventListener('click', function() {
+          document.querySelector('.dropdown-content').classList.toggle('show');
+      });
+  });
+  
+  window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+              }
+          }
+      }
+  }
+    </script>
+ </head>
+ <body>
+   <!-- Header -->
+   <section id="header">
+     <div class="header container">
+       <div class="nav-bar">
+         <div class="brand">
+           <a href="index.html"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></a>
+         </div>
+         <div class="nav-list">
+           <div class="hamburger"><div class="bar"></div></div>
+           <ul>
+            <li><a href="index.html" data-after="Home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="github.html">GitHub</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+             
+           </ul>
+         </div>
+       </div>
+     </div>
+   </section>
+   <!-- End Header -->
+
+   <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>Huzaifa <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+        <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+              <a href="about.html">About</a>
+              <a href="project.html">Projects</a>
+              <a href="services.html">Services</a>
+              <a href="github.html">GitHub</a>
+              <a href="Certification.html">Certification</a>
+              <a href="testi.html">Testimonials</a>
+              <a href="contact.html">Contacts</a>
+          </div>
+      </div>
+    </div>
+  </section>
+ <!-- Projects Section -->
+ <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Latest <span>Projects</span></h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Cryptography</h1>
+            <h2></h2>
+            <p>This project is a GUI application for encrypting and decrypting text using various cryptographic ciphers. The supported ciphers are:</p>
+            <p>AES (Advanced Encryption Standard)<br>
+            DES (Data Encryption Standard)<br>
+            Caesar Cipher<br>
+            Vigenere Cipher<br>
+            Substitution Cipher<br>
+            RSA (Rivest–Shamir–Adleman)</p>
+          </div>
+          <div class="project-img">
+            <img src="images/cypto.jpeg" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Multi Factor Authentication</h1>
+         
+            <p>A python based application for Applying Multifactor authentication
+
+              Two-Factor Authentication System
+              
+              This Python application provides a two-factor authentication (2FA) system with registration, login, and password reset functionalities using Tkinter for the GUI. Key features include:
+              
+              User Registration: Collects user information (name, email, password) and generates a QR code for 2FA setup. Login: Validates user credentials and sends a one-time password (OTP) to the user's email for secure login. Password Reset: Allows users to reset their password after verification. Enhanced Security: Utilizes encryption for storing passwords and OTPs.</p>
+          </div>
+          <div class="project-img">
+            <img src="images/2fa.jpeg" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Email Encryption</h1>
+            
+            <p>This Python application allows you to send and receive encrypted emails using the cryptography library. It features a Tkinter-based GUI for a user-friendly experience, including functionalities to:
+
+              Generate and manage encryption keys: Automatically creates and saves an encryption key for secure email communications. Encrypt and send emails: Encrypts the message body before sending via SMTP, with support for Gmail's SMTP and IMAP servers. Receive and decrypt emails: Connects to Gmail's IMAP server to fetch and decrypt received emails. User authentication: Saves email credentials securely using pickle to avoid repeated logins. </p>
+          </div>
+          <div class="project-img">
+            <img src="images/images.jpeg" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Smart Dictionary</h1>
+           
+            <p>A Smart python code for A smart Dictionary
+
+              This code creates a simple GUI application using Tkinter for a Smart Dictionary. The dictionary allows users to add, search, update, and delete words along with their definitions. The application uses SQLite to store word-definition pairs in a database.</p>
+          </div>
+          <div class="project-img">
+            <img src="images/dictionary.jpg" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Website Designing</h1>
+            
+            <p>Web development involves creating and maintaining websites and web applications. Web developers use various programming languages and frameworks to build responsive, user-friendly, and functional websites. Web development services include front-end and back-end development, website design, e-commerce solutions, content management systems, and website optimization.</p>
+          </div>
+          <div class="project-img">
+            <img src="images/web2.jpg" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Projects Section -->
+
+   <!-- Footer -->
+   <section id="footer">
+    <div class="footer container">
+      <div class="brand"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></div>
+      <h2>Your Cyber Security Consultant</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.facebook.com/ahnaf.honey/"><img src="images/fb.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/shorttemperd007/"><img src="images/insta.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://twitter.com/ShortTemperd007"><img src="images/x2.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/muhammad-huzaifa-anjum-a80aa0279/"><img src="images/link.png"/></a>
+        </div>
+      </div>
+      <p>Copyright © 2021 Huzaifa. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+</html>

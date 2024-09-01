@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <title>Portfolio</title>
+  <script>
+
+    // script.js 
+  
+  document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.dropbtn').addEventListener('click', function() {
+          document.querySelector('.dropdown-content').classList.toggle('show');
+      });
+  });
+  
+  window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+              }
+          }
+      }
+  }
+    </script>
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="index.html"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="index.html" data-after="Home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="github.html">GitHub</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>Huzaifa <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+        <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+              <a href="about.html">About</a>
+              <a href="project.html">Projects</a>
+              <a href="services.html">Services</a>
+              <a href="github.html">GitHub</a>
+              <a href="Certification.html">Certification</a>
+              <a href="testi.html">Testimonials</a>
+              <a href="contact.html">Contacts</a>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+
+
+
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="contact container">
+      <div><h1 class="section-title">Contact <span>info</span></h1></div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>+92 310 6771 230</h2>
+            <h2>+92 303 7474 643</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png"/></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>mhuzianjum.786@gmail.com</h2>
+            <h2>F21BINCE1M03051@iub.edu.pk</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png"/></div>
+          <div class="contact-info">
+            <h1>Address</h1>
+            <h2>New Central Jail road, Arif Colony Street #1 House #19 , Bahawalpur, Pakistan</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="new-contact">
+    <div class="contact-info">
+        <h2>3 ESSENTIAL FIELDS IN CONTACT FORMS</h2>
+        <div class="info-item">
+            <div class="info-number">1</div>
+            <div class="info-text">Name</div>
+        </div>
+        <div class="info-item">
+            <div class="info-number">2</div>
+            <div class="info-text">Email address</div>
+        </div>
+        <div class="info-item">
+            <div class="info-number">3</div>
+            <div class="info-text">Message</div>
+        </div>
+    </div>
+    <div class="contact-form">
+        <h2>Contact Form</h2>
+        <form action="https://getform.io/f/bkkgelgb" method="post">
+            <div class="form-group">
+                <label for="new-first-name">First name</label>
+                <input type="text" id="new-first-name" name="first-name" placeholder="First name" required>
+            </div>
+            <div class="form-group">
+                <label for="new-last-name">Last name</label>
+                <input type="text" id="new-last-name" name="last-name" placeholder="Last name" required>
+            </div>
+            <div class="form-group">
+                <label for="new-email">Email</label>
+                <input type="email" id="new-email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="new-contact-method">Preferred method of contact</label>
+                <select id="new-contact-method" name="contact-method">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="new-message">Message</label>
+                <textarea id="new-message" name="message" rows="4" placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit">SEND MESSAGE</button>
+        </form>
+    </div>
+</section>
+
+</section>
+
+  
+  <!-- End Contact Section -->
+
+
+
+
+
+ <!-- Footer -->
+ <section id="footer">
+  <div class="footer container">
+    <div class="brand"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></div>
+    <h2>Your Cyber Security Consultant</h2>
+    <div class="social-icon">
+      <div class="social-item">
+        <a href="https://www.facebook.com/ahnaf.honey/"><img src="images/fb.png"/></a>
+      </div>
+      <div class="social-item">
+        <a href="https://www.instagram.com/shorttemperd007/"><img src="images/insta.png"/></a>
+      </div>
+      <div class="social-item">
+        <a href="https://twitter.com/ShortTemperd007"><img src="images/x2.png"/></a>
+      </div>
+      <div class="social-item">
+        <a href="https://www.linkedin.com/in/muhammad-huzaifa-anjum-a80aa0279/"><img src="images/link.png"/></a>
+      </div>
+    </div>
+    <p>Copyright © 2021 Huzaifa. All rights reserved</p>
+  </div>
+</section>
+<!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+</html>

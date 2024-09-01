@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <title>Portfolio</title>
+  <script>
+
+    // script.js
+  
+  document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.dropbtn').addEventListener('click', function() {
+          document.querySelector('.dropdown-content').classList.toggle('show');
+      });
+  });
+  
+  window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+              }
+          }
+      }
+  }
+    </script>
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="index.html"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="index.html" data-after="Home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="github.html">GitHub</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- End Header -->
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>Huzaifa <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+        <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+              <a href="about.html">About</a>
+              <a href="project.html">Projects</a>
+              <a href="services.html">Services</a>
+              <a href="github.html">GitHub</a>
+              <a href="Certification.html">Certification</a>
+              <a href="testi.html">Testimonials</a>
+              <a href="contact.html">Contacts</a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- Service Section -->
+ <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">Serv<span>i</span>ces</h1>
+        <p> Following Are Various servives that are being provided by Our company.
+          Do Contact if you wanted any of this service of wanted to make any project related to these services.
+        </p>
+      </div>
+      <div class="service-bottom">
+        <div class="service-item">
+          
+          <h2>Ethical Hacker</h2>
+          <p>Ethical hackers, also known as white-hat hackers, help organizations identify and fix security vulnerabilities. They use their skills to protect systems and data by performing penetration tests, security assessments, and vulnerability scans. Ethical hackers ensure that systems are secure from malicious attacks and breaches.</p>
+        </div>
+        <div class="service-item">
+          
+          <h2>Cyber  security </h2>
+          <p>Cybersecurity professionals are responsible for protecting computer systems, networks, and data from cyber threats. They implement security measures, monitor for suspicious activities, respond to incidents, and ensure compliance with security policies and regulations. Cybersecurity services include risk assessment, security audits, threat analysis, and security training.</p>
+        </div>
+        <div class="service-item">
+          
+          <h2>Digital Forensics</h2>
+          <p>Digital forensics experts specialize in investigating digital devices and networks to uncover evidence of cybercrimes. They analyze data from computers, mobile devices, and other digital media to identify and recover information that can be used in legal proceedings. Digital forensics services include data recovery, malware analysis, incident response, and forensic reporting</p>
+        </div>
+        <div class="service-item">
+          
+          <h2>Web Design</h2>
+          <p>Web development involves creating and maintaining websites and web applications. Web developers use various programming languages and frameworks to build responsive, user-friendly, and functional websites. Web development services include front-end and back-end development, website design, e-commerce solutions, content management systems, and website optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Service Section -->
+
+
+
+<!-- registration form -->
+
+<title>Event Registration Form</title>
+</head>
+<body>
+  <section id="registration">
+    <div class="registration-container">
+      <h2> Registration Form</h2>
+      <form action="https://getform.io/f/bkkgelgb" method="POST">
+        <div class="form-group">
+          <label for="first-name">Name</label>
+          <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+          <input type="text" id="last-name" name="last_name" placeholder="Last Name" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="Company">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" id="area-code" name="area_code" placeholder="Area Code">
+          <input type="text" id="phone-number" name="phone_number" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option>Choose Option</option>
+            <option>Ethical-Hacker</option>
+            <option>Cybersecurity</option>
+            <option>Web Design</option>
+            <option>Digital Forensics</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Are you an existing customer?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="existing_customer" value="yes"> Yes</label>
+            <label><input type="radio" name="existing_customer" value="no"> No</label>
+          </div>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </section>
+
+
+
+ <!-- Footer -->
+ <section id="footer">
+  <div class="footer container">
+    <div class="brand"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></div>
+    <h2>Your Cyber Security Consultant</h2>
+    <div class="social-icon">
+      <div class="social-item">
+        <a href="https://www.facebook.com/ahnaf.honey/"><img src="images/fb.png"/></a>
+      </div>
+      <div class="social-item">
+        <a href="https://www.instagram.com/shorttemperd007/"><img src="images/insta.png"/></a>
+      </div>
+      <div class="social-item">
+        <a href="https://twitter.com/ShortTemperd007"><img src="images/x2.png"/></a>
+      </div>
+      <div class="social-item">
+        <a href="https://www.linkedin.com/in/muhammad-huzaifa-anjum-a80aa0279/"><img src="images/link.png"/></a>
+      </div>
+    </div>
+    <p>Copyright © 2021 Huzaifa. All rights reserved</p>
+  </div>
+</section>
+<!-- End Footer -->
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+</html>

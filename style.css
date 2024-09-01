@@ -1,0 +1,1495 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
+body {
+    
+}
+
+
+h1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+p{font-style: italic;}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: .05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+.section-title span {
+	color: palevioletred;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid palevioletred;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+	transition: .3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: palevioletred;
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: palevioletred;
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: .3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 32, 32);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: .5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: .3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: palevioletred;
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: .3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+/* End Header section */
+
+#hero {
+	background-image: url(images/bg.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+	
+}
+#hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: .7;
+	z-index: -1;
+}
+#hero .hero {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+
+
+/* Apply the Montserrat font to the hero section */
+#hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-size: 4rem;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100%) rotateY(90deg);
+    transform-origin: left;
+    animation: slide_in_left 1s ease forwards;
+    margin: 0;
+}
+
+/* Specific colors and delays for each line */
+#hero h1:nth-child(1), #hero h1:nth-child(2) {
+    color: white;
+    animation-delay: 0.5s;
+}
+
+#hero h1:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(3), #hero h1:nth-child(4) {
+    color: palevioletred; /* Pink color */
+}
+
+#hero h1:nth-child(3) {
+    animation-delay: 2.5s;
+}
+
+#hero h1:nth-child(4) {
+    animation-delay: 3.5s;
+}
+
+/* Slide-in with 3D effect keyframes */
+@keyframes slide_in_left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotateY(90deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0) rotateY(45deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotateY(0deg);
+    }
+}
+
+
+
+	
+
+/* End Hero Section */
+
+/* Services Section */
+#services .services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1400px; /* Slightly reduced width for a more compact look */
+    margin: 0 auto;
+    padding: 80px 0; /* Reduced padding */
+	
+}
+
+#services .service-top {
+    max-width: 550px; /* Slightly increased width for the service top */
+    margin: 0 auto;
+}
+
+#services .service-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px; /* Reduced margin */
+	
+}
+
+#services .service-item {
+    flex-basis: 28%; /* Adjusted for better spacing */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px; /* Slightly reduced padding */
+    border-radius: 15px; /* More rounded corners */
+    background: linear-gradient(145deg, #3c3b40, #2c2a31); /* Changed to a dark gradient background */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); /* Added 3D effect with shadow */
+    margin: 15px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 270px; /* Slightly increased height */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition for hover effect */
+}
+
+#services .service-item:hover {
+    transform: translateY(-10px) scale(1.05); /* Added lift and scale effect on hover */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4), -10px -10px 20px rgba(255, 255, 255, 0.2); /* Enhanced shadow on hover */
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(60deg, #4a4a52 0%, #2e2b34 100%); /* Updated gradient with deeper colors */
+    opacity: .85;
+    z-index: -1;
+    transition: opacity 0.4s ease; /* Smooth transition for overlay */
+}
+
+#services .service-item:hover::after {
+    opacity: 0.7; /* Reduced overlay opacity on hover */
+}
+
+#services .service-bottom .icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 4px 6px black); /* Added drop shadow to the icon for depth */
+    transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+
+#services .service-item:hover .icon {
+    transform: rotate(10deg) scale(1.1); /* Rotate and scale icon on hover */
+}
+
+#services .service-item h2 {
+    font-size: 2rem;
+    color: #e0e0e0; /* Slightly lighter color */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Added letter spacing for modern look */
+}
+
+#services .service-item p {
+    color: #d3d3d3; /* Light gray color for the paragraph text */
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* Adjusted line clamp for consistency */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5; /* Improved line spacing for readability */
+}
+
+
+/* Projects Section */
+#projects .projects {
+	flex-direction: column;
+	max-width: 1100px; /* Reduced max width for a smaller look */
+	margin: 0 auto;
+	padding: 80px 0; /* Reduced padding for a more compact look */
+}
+
+#projects .projects-header h1 {
+	/* Kept the font size and style unchanged */
+	margin-bottom: 50px;
+	font-size: 6rem; /* Unchanged font size */
+	font-weight: 500;
+	color: #333; /* Unchanged color */
+}
+
+#projects .all-projects {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#projects .project-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 70%; /* Smaller width for the project boxes */
+	margin: 15px auto; /* Reduced margin */
+	overflow: hidden;
+	border-radius: 15px; /* More rounded corners for a modern look */
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+	background-color: #2c3e50; /* Changed background color */
+}
+
+#projects .project-item:hover {
+	transform: translateY(-10px); /* Subtle lift on hover */
+	box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+#projects .project-info {
+	padding: 20px; /* Reduced padding for a sleeker look */
+	flex-basis: 45%; /* Adjusted flex-basis for balance */
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #34495e; /* Updated background color */
+	color: #ecf0f1; /* Lighter text color for better contrast */
+	transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#projects .project-info h1 {
+	font-size: 2.5rem; /* Reduced font size */
+	font-weight: 600;
+	color: #ecf0f1; /* Lighter text color */
+}
+
+#projects .project-info h2 {
+	font-size: 1.5rem; /* Reduced font size */
+	font-weight: 400;
+	margin-top: 10px;
+	color: #bdc3c7; /* Softer color for subheading */
+}
+
+#projects .project-info p {
+	color: #bdc3c7; /* Softer color for paragraph text */
+}
+
+#projects .project-img {
+	flex-basis: 55%; /* Adjusted flex-basis for balance */
+	height: 250px; /* Reduced height for a smaller box */
+	overflow: hidden;
+	position: relative;
+	border-radius: 15px 15px 0 0; /* Matching rounded corners */
+}
+
+#projects .project-img:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Updated overlay with transparency */
+	transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+#projects .project-item:hover .project-img:after {
+	opacity: 0.3; /* Reduced overlay opacity on hover */
+}
+
+#projects .project-img img {
+	transition: transform 0.5s ease, filter 0.5s ease; /* Smooth and slow image zoom */
+	filter: grayscale(0.2); /* Subtle grayscale effect */
+}
+
+#projects .project-item:hover .project-img img {
+	transform: scale(1.1); /* Increased zoom effect on hover */
+	filter: grayscale(0); /* Remove grayscale on hover */
+}
+
+/* End Projects section */
+
+/* About Section */
+
+#about .about {
+
+	
+	flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+#about .col-left {
+	width: 250px;
+	height: 360px;
+}
+#about .col-right {
+	width: 100%;
+}
+#about .col-right h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: .2rem;
+	margin-bottom: 10px;
+}
+#about .col-right p {
+	margin-bottom: 20px;
+}
+#about .col-right .cta {
+	color: black;
+	margin-bottom: 50px;
+	padding: 10px 20px;
+	font-size: 2rem;
+}
+#about .col-left .about-img {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	border: 10px solid white;
+}
+#about .col-left .about-img::after {
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 98%;
+	width: 98%;
+	border: 7px solid palevioletred;
+	z-index: -1;
+}
+/* End About Section */
+
+/* Start Certification Section */
+
+#certifications .certifications {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0; /* Slightly increased padding */
+}
+
+#certifications .certifications-header h1 {
+    margin-bottom: 40px; /* Increased margin for better spacing */
+    color: #4a4a52; /* Updated color */
+}
+
+#certifications .all-certifications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#certifications .certification-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px 0; /* Increased margin for more spacing */
+    overflow: hidden;
+    border-radius: 15px; /* Increased border-radius for a softer look */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); /* Added 3D box-shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition */
+}
+
+#certifications .certification-item:hover {
+    transform: translateY(-10px) scale(1.05); /* Added lift and scale effect on hover */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4), -10px -10px 20px rgba(255, 255, 255, 0.2); /* Enhanced shadow on hover */
+}
+
+#certifications .certification-info {
+    padding: 25px; /* Increased padding */
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(145deg, #3c3b40, #2c2a31); /* Updated gradient with darker tones */
+    color: #e0e0e0; /* Updated text color */
+    transition: background-color 0.3s ease; /* Added transition for background color */
+}
+
+#certifications .certification-info h1 {
+    font-size: 2.2rem; /* Slightly increased font size */
+    font-weight: 600; /* Bolder font weight */
+    color: #d87093; /* Updated heading color */
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Added color transition */
+}
+
+#certifications .certification-info h2 {
+    font-size: 1.5rem; /* Slightly increased font size */
+    font-weight: 500;
+    color: #ffffff; /* Updated color */
+    margin-top: 8px;
+    transition: color 0.3s ease; /* Added color transition */
+}
+
+#certifications .certification-info p {
+    color: #cccccc; /* Lighter gray color for text */
+    line-height: 1.6; /* Improved line spacing */
+    transition: color 0.3s ease; /* Added color transition */
+}
+
+#certifications .certification-item:hover .certification-info h1,
+#certifications .certification-item:hover .certification-info h2,
+#certifications .certification-item:hover .certification-info p {
+    color: #ffd700; /* Golden color on hover for text */
+}
+
+#certifications .certification-img {
+    width: 100%;
+    height: 220px; /* Slightly increased height */
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: border-radius 0.4s ease; /* Smooth transition for border-radius */
+}
+
+#certifications .certification-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Smooth transform on hover */
+}
+
+#certifications .certification-item:hover .certification-img img {
+    transform: scale(1.15); /* Increased scale effect */
+}
+
+#certifications .certification-item:hover .certification-img {
+    border-radius: 20px; /* More rounded corners on hover */
+}
+
+/* End Certification Section */
+
+
+/* Start GitHub Section */
+
+#github .github {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0; /* Adjusted padding for better spacing */
+}
+
+#github .github-header h1 {
+    margin-bottom: 40px; /* Adjusted margin for better spacing */
+    color: #333; /* Dark grey for the header */
+    font-size: 6rem; /* Increased font size for prominence */
+    font-weight: 700; /* Bold font weight for prominence */
+}
+
+#github .all-repositories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#github .repository-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%; /* Keeps three items per row */
+    margin: 20px; /* Increased margin for better spacing */
+    overflow: hidden;
+    border-radius: 15px; /* Rounded corners for a modern look */
+    height: 250px; /* Fixed height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(255, 255, 255, 0.1); /* Added 3D effect */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transitions */
+}
+
+#github .repository-item:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 -8px 16px rgba(255, 255, 255, 0.2); /* Enhanced shadow on hover */
+}
+
+#github .repository-info {
+    padding: 20px;
+    flex-basis: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(145deg, #3c3b40, #2c2a31); /* Updated gradient */
+    color: #ffffff; /* Updated text color to match modern aesthetic */
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#github .repository-info h1 {
+    font-size: 2rem; /* Adjusted font size */
+    font-weight: 500; /* Consistent with Certification Section */
+    color: #f5f5f5; /* Light grey for primary headings */
+    margin: 0;
+}
+
+#github .repository-info h2 {
+    font-size: 1.4rem; /* Slightly increased font size */
+    font-weight: 500; /* Consistent with Certification Section */
+    color: #ffffff; /* Warm orange for secondary headings */
+    margin-top: 5px;
+}
+
+#github .repository-info p {
+    font-size: 1rem; /* Increased font size */
+    color: #e0e0e0; /* Light grey for better readability */
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limits text to a specified number of lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#github .repository-info a {
+    margin-top: 10px;
+    color: #ffffff; /* Warm orange for links */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+
+#github .repository-info a:hover {
+    color: #ffffff; /* Light color on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* End GitHub Section */
+
+
+/* Start Contact Section */
+
+#contact .contact {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0; /* Added padding for better spacing */
+}
+
+#contact .contact-items {
+    width: 100%; /* Full width to allow items to align better */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Gap between items for spacing */
+}
+
+#contact .contact-item {
+    width: 300px; /* Reduced width for a more compact design */
+    padding: 40px; /* Adjusted padding for a balanced layout */
+    text-align: center;
+    border-radius: 15px; /* More rounded corners for a modern look */
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(145deg, #3c3b40, #2c2a31); /* Dark gradient background for a sleek look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transformations */
+}
+
+#contact .contact-item:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow for a more pronounced 3D effect */
+}
+
+#contact .icon {
+    width: 80px; /* Slightly larger icon */
+    margin: 0 auto 15px; /* Combined margin for cleaner code */
+    transition: transform 0.3s ease; /* Smooth transform for icon */
+}
+
+#contact .contact-item:hover .icon {
+    transform: rotate(360deg); /* 360-degree rotation on hover */
+}
+
+#contact .contact-info h1 {
+    font-size: 2.5rem;
+    font-weight: 700; /* Bolder font weight for prominence */
+    margin-bottom: 10px; /* Increased bottom margin for spacing */
+    color: #f5f5f5; /* Light grey for the heading */
+    text-transform: uppercase; /* Uppercase for a more impactful look */
+}
+
+#contact .contact-info h2 {
+    font-size: 1.4rem; /* Slightly increased font size */
+    line-height: 2rem;
+    font-weight: 500;
+    color: #e0e0e0; /* Light grey for consistency */
+    margin-bottom: 15px; /* Added bottom margin for spacing */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+}
+
+/* End Contact Section */
+
+
+
+/* Heading styles */
+#new-contact h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contact info section */
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d87093;
+    margin-right: 10px;
+}
+
+.info-text {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Contact form section */
+.contact-form {
+    width: 100%;
+}
+
+.contact-form h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d87093;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #d87093;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #d87093;
+}
+/*End contact Section */
+
+/* Start Footer */
+#footer {
+	 
+    background-image: linear-gradient(60deg, #2e2a36 0%, #2c2a31 100%);
+    padding: 30px 20px; /* Reduced padding for a smaller height */
+    position: relative;
+    overflow: hidden;
+}
+
+#footer .footer {
+    min-height: 150px; /* Reduced minimum height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px; /* Reduced top padding */
+    padding-bottom: 20px; /* Reduced bottom padding */
+    position: relative;
+    z-index: 1;
+}
+
+#footer h2 {
+    color: #f5f5f5;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+    margin-top: 10px; /* Reduced margin for tighter spacing */
+    margin-bottom: 10px; /* Reduced margin for tighter spacing */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: text_reveal_name 1.5s ease forwards;
+    overflow: hidden;
+}
+
+#footer .social-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Reduced bottom margin */
+}
+
+#footer .social-item {
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+    perspective: 1000px;
+}
+
+#footer .social-item img {
+    filter: grayscale(1);
+    transition: transform 0.4s ease, filter 0.3s ease;
+    transform: rotateY(0deg);
+}
+
+#footer .social-item:hover img {
+    filter: grayscale(0);
+    transform: rotateY(360deg);
+}
+
+#footer p {
+    color: #e0e0e0;
+    font-size: 1.2rem; /* Slightly reduced font size */
+    text-align: center;
+    margin-top: 10px; /* Reduced margin for tighter spacing */
+    margin-bottom: 5px; /* Reduced margin for tighter spacing */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Background Animation */
+#footer::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 300px; /* Reduced background effect size */
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0) 80%);
+    transform: translateX(-50%) rotate(45deg);
+    animation: pulse 6s infinite;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+/* Keyframes */
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) rotate(45deg) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) rotate(45deg) scale(1.3);
+    }
+    100% {
+        transform: translateX(-50%) rotate(45deg) scale(1);
+    }
+}
+
+@keyframes text_reveal_name {
+    0% {
+        color: transparent;
+        transform: translateY(100%);
+    }
+    100% {
+        color: #f5f5f5;
+        transform: translateY(0%);
+    }
+}
+
+/* End Footer */
+
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	/* Hero */
+	#hero h1 {
+		font-size: 7rem;
+	}
+	/* End Hero */
+
+	/* Services Section */
+	#services .service-bottom .service-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End Services Section */
+
+	/* Project */
+	#projects .project-item {
+		flex-direction: row;
+	}
+	#projects .project-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#projects .project-item {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .all-projects .project-info {
+		height: 100%;
+	}
+	#projects .all-projects .project-img {
+		height: 100%;
+	}
+	/* End Project */
+
+	/* About */
+	#about .about {
+		flex-direction: row;
+	}
+	#about .col-left {
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+	}
+	#about .about .col-left .about-img::after {
+		left: -45px;
+		top: 34px;
+		height: 98%;
+		width: 98%;
+		border: 10px solid palevioletred;
+	}
+	#about .col-right {
+		text-align: left;
+		padding: 30px;
+	}
+	#about .col-right h1 {
+		text-align: left;
+	}
+	/* End About */
+
+	/* contact  */
+	#contact .contact {
+		flex-direction: column;
+		padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+	}
+	#contact .contact-items {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+	#contact .contact-item {
+		width: 30%;
+		margin: 0;
+		flex-direction: row;
+	}
+	#contact .contact-item .icon {
+		height: 100px;
+		width: 100px;
+	}
+	#contact .contact-item .icon img {
+		object-fit: contain;
+	}
+	#contact .contact-item .contact-info {
+		width: 100%;
+		text-align: left;
+		padding-left: 20px;
+
+
+
+
+		
+	}
+	/* End contact  */
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+	/* header */
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+
+	#services .service-bottom .service-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+}
+
+/* End  Media Query For Desktop */
+
+
+/* Existing styles */
+
+
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+#new-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+
+
+
+/* registration form */
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #f4f4f4;
+  }
+  
+  #registration {
+	background-color: #fff;
+	padding: 40px;
+	margin: 20px auto;
+	max-width: 600px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #registration h2 {
+	margin-bottom: 20px;
+	font-size: 2rem;
+	color: #333;
+	text-align: center;
+  }
+  
+  #registration .form-group {
+	margin-bottom: 20px;
+  }
+  
+  #registration .form-group label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: #555;
+  }
+  
+  #registration .form-group input,
+  #registration .form-group select {
+	width: 100%;
+	padding: 12px 15px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	margin-bottom: 10px;
+	transition: border-color 0.3s ease;
+  }
+  
+  #registration .form-group input:focus,
+  #registration .form-group select:focus {
+	border-color: #d87093;
+	outline: none;
+  }
+  
+  #registration .radio-group {
+	display: flex;
+	gap: 10px;
+  }
+  
+  #registration .radio-group label {
+	font-weight: normal;
+  }
+  
+  #registration button {
+	display: inline-block;
+	width: 100%;
+	padding: 12px 0;
+	border: none;
+	border-radius: 5px;
+	background-color: #d87093;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  #registration button:hover {
+	background-color: #d87093;
+  }
+  
+  @media (max-width: 600px) {
+	#registration {
+	  padding: 20px;
+	}
+  
+	#registration h2 {
+	  font-size: 1.5rem;
+	}
+  }
+
+
+
+  /* General dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent light black */
+    color: white;
+    padding: 16px;
+    font-size: 18px; /* Increased font size */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: rgba(0, 0, 0, 0.85); /* Darker black on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.95); /* Slightly transparent black */
+    min-width: 250px; /* Increased width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 60px; /* Adjust as needed to position below header */
+    border-radius: 4px; /* Rounded corners */
+    overflow: hidden; /* Ensures all children elements fit within rounded corners */
+    backdrop-filter: blur(10px); /* Add blur effect for modern look */
+}
+
+.dropdown-content a {
+    color: #ffffff; /* White text color */
+    padding: 16px 24px; /* Increased padding for larger size */
+    font-size: 18px; /* Increased font size */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #d87093
+}
+
+/* Show the dropdown menu when the button is clicked */
+.show {
+    display: block;
+}
+
+/* About */
+#about .about {
+    flex-direction: row;
+}
+
+#about .col-left {
+    width: 600px;
+    height: 400px;
+    padding-left: 60px;
+}
+
+#about .about .col-left .about-img::after {
+    left: -45px;
+    top: 34px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid #d87093;
+}
+
+#about .col-right {
+    text-align: left;
+    padding: 30px;
+}
+
+#about .col-right h1 {
+    text-align: left;
+}
+
+
+
+
+/* Testimonials Section Styles */
+#testimonials {
+    background: linear-gradient(120deg, #f8f9fa, #e0e0e0); /* Gradient background for added depth */
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#testimonials h2 {
+    margin-bottom: 50px;
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    font-weight: 800;
+    width: 100%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Deeper shadow for a floating effect */
+    width: 350px;
+    text-align: center;
+    transform: perspective(1000px) rotateY(0deg); /* 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.testimonial:hover {
+    transform: perspective(1000px) rotateY(10deg); /* Slight 3D rotation on hover */
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.testimonial-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for image */
+    transition: transform 0.3s ease; /* Smooth transition for image effect */
+}
+
+.testimonial:hover .testimonial-image {
+    transform: scale(1.1); /* Slight zoom effect on image */
+}
+
+.testimonial-content {
+    margin-top: 20px;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #555;
+    margin: 20px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.testimonial:hover .testimonial p {
+    color: #333; /* Darker color on hover */
+}
+
+.testimonial-details h3 {
+    font-size: 1.3rem;
+    color: #d87093;
+    margin: 10px 0;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.testimonial:hover .testimonial-details h3 {
+    color: #d45d79; /* Slightly darker color on hover */
+}
+
+.testimonial-details h4 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.testimonial:hover .testimonial-details h4 {
+    color: #444; /* Darker color on hover */
+}
+
+/* Keyframes for animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial {
+    animation: fadeInUp 0.6s ease-out; /* Animation for fade-in effect */
+}
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	#testimonials {
+	  padding: 40px 10px;
+	}
+  
+	#testimonials h2 {
+	  font-size: 2.5rem;
+	}
+  
+	.testimonials-container {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.testimonial {
+	  width: 90%;
+	}
+  }
+  

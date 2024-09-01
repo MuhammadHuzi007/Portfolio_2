@@ -1,0 +1,736 @@
+/* Media Queries for Mobile Devices */
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+    html {
+        font-size: 9px; /* Adjust base font size */
+    }
+    
+    .section-title {
+        font-size: 3rem; /* Adjust section title size */
+    }
+
+    p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+        line-height: 2rem;
+    }
+
+    .cta {
+        font-size: 1.6rem; /* Adjust CTA button font size */
+        padding: 8px 20px; /* Adjust CTA padding */
+    }
+
+    .brand h1 {
+        font-size: 2.5rem; /* Adjust brand name size */
+    }
+
+    /* Header adjustments */
+    #header .nav-bar {
+        padding: 0 5px; /* Reduce padding in navbar */
+    }
+
+    #header .nav-list ul a {
+        font-size: 2rem; /* Adjust navbar link font size */
+        padding: 15px; /* Adjust navbar link padding */
+    }
+
+    #header .hamburger {
+        height: 50px;
+        width: 50px; /* Smaller hamburger icon */
+        margin-right: 15px;
+    }
+
+    #header .hamburger .bar {
+        width: 25px; /* Smaller bar inside hamburger icon */
+    }
+}
+
+/* For devices with a max width of 480px */
+@media (max-width: 480px) {
+    html {
+        font-size: 8px; /* Further reduce base font size */
+    }
+    
+    .section-title {
+        font-size: 2.5rem; /* Further adjust section title size */
+    }
+
+    p {
+        font-size: 1rem; /* Further adjust paragraph font size */
+        line-height: 1.8rem;
+    }
+
+    .cta {
+        font-size: 1.4rem; /* Further adjust CTA button font size */
+        padding: 7px 15px; /* Further adjust CTA padding */
+    }
+
+    .brand h1 {
+        font-size: 2rem; /* Further adjust brand name size */
+    }
+
+    /* Header adjustments */
+    #header .nav-list ul a {
+        font-size: 1.8rem; /* Further adjust navbar link font size */
+        padding: 12px; /* Further adjust navbar link padding */
+    }
+
+    #header .hamburger {
+        height: 45px;
+        width: 45px; /* Further smaller hamburger icon */
+        margin-right: 10px;
+    }
+
+    #header .hamburger .bar {
+        width: 22px; /* Further smaller bar inside hamburger icon */
+    }
+}
+
+
+
+
+
+/* Media Queries for Mobile Devices */
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+
+    /* Hero Section */
+    #hero {
+        padding: 0 20px; /* Reduce padding on smaller screens */
+    }
+    
+    #hero h1 {
+        font-size: 3rem; /* Adjust font size for mobile */
+    }
+
+    /* Services Section */
+    #services .service-bottom {
+        flex-direction: column; /* Stack service items vertically */
+    }
+
+    #services .service-item {
+        flex-basis: 100%; /* Each service item takes full width */
+        margin: 20px 0; /* Add margin between stacked items */
+        height: auto; /* Allow height to adjust automatically */
+        padding: 20px;
+    }
+
+    #services .service-item h2 {
+        font-size: 1.8rem; /* Adjust heading font size */
+    }
+
+    #services .service-item p {
+        font-size: 1.4rem; /* Adjust paragraph font size */
+        -webkit-line-clamp: 4; /* Adjust number of lines for text truncation */
+    }
+
+    #services .service-bottom .icon {
+        height: 60px; /* Adjust icon size */
+        width: 60px;
+        margin-bottom: 15px;
+    }
+}
+
+/* For devices with a max width of 480px */
+@media (max-width: 480px) {
+
+    /* Hero Section */
+    #hero h1 {
+        font-size: 2.5rem; /* Further adjust font size for smaller screens */
+    }
+
+    /* Services Section */
+    #services .service-item {
+        padding: 15px; /* Further reduce padding for smaller screens */
+        margin: 15px 0; /* Adjust margin for better spacing */
+    }
+
+    #services .service-item h2 {
+        font-size: 1.6rem; /* Further adjust heading font size */
+    }
+
+    #services .service-item p {
+        font-size: 1.2rem; /* Further adjust paragraph font size */
+        -webkit-line-clamp: 3; /* Further adjust number of lines for text truncation */
+    }
+
+    #services .service-bottom .icon {
+        height: 50px; /* Further adjust icon size */
+        width: 50px;
+    }
+}
+
+
+
+
+
+
+
+/* Media Queries for Mobile Devices */
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+
+    /* Projects Section */
+    #projects .project-item {
+        flex-direction: column; /* Stack project image and info vertically */
+        width: 100%; /* Full width for project items */
+        margin: 10px auto;
+    }
+
+    #projects .project-info {
+        padding: 20px; /* Reduce padding for mobile */
+    }
+
+    #projects .project-info h1 {
+        font-size: 2.5rem; /* Adjust font size for mobile */
+    }
+
+    #projects .project-info h2 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    #projects .project-img {
+        height: 200px; /* Reduce image height */
+    }
+
+    /* About Section */
+    #about .about {
+        padding: 50px 20px; /* Reduce padding for mobile */
+    }
+
+    #about .col-left, 
+    #about .col-right {
+        width: 100%; /* Full width columns */
+    }
+
+    #about .col-left {
+        margin-bottom: 30px; /* Add space between image and text */
+    }
+
+    #about .col-right h2 {
+        font-size: 1.6rem; /* Adjust font size for mobile */
+    }
+
+    #about .col-right .cta {
+        font-size: 1.8rem; /* Adjust button font size */
+    }
+
+    /* Certifications Section */
+    #certifications .all-certifications {
+        flex-direction: column; /* Stack certification items vertically */
+    }
+
+    #certifications .certification-item {
+        width: 100%; /* Full width for certification items */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
+
+    #certifications .certification-info h1 {
+        font-size: 1.8rem; /* Adjust font size for mobile */
+    }
+
+    #certifications .certification-info h2 {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+    }
+
+    #certifications .certification-img {
+        height: 150px; /* Reduce image height */
+    }
+}
+
+/* For devices with a max width of 480px */
+@media (max-width: 480px) {
+
+    /* Projects Section */
+    #projects .project-info h1 {
+        font-size: 2rem; /* Further reduce font size */
+    }
+
+    #projects .project-info h2 {
+        font-size: 1.3rem; /* Further reduce font size */
+    }
+
+    /* About Section */
+    #about .col-right h2 {
+        font-size: 1.4rem; /* Further reduce font size */
+    }
+
+    #about .col-right .cta {
+        font-size: 1.6rem; /* Further reduce button font size */
+    }
+
+    /* Certifications Section */
+    #certifications .certification-info h1 {
+        font-size: 1.6rem; /* Further reduce font size */
+    }
+
+    #certifications .certification-info h2 {
+        font-size: 1rem; /* Further reduce font size */
+    }
+
+    #certifications .certification-img {
+        height: 120px; /* Further reduce image height */
+    }
+}
+
+
+
+
+
+
+/* Media Queries for Mobile Devices */
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+
+    /* GitHub Section */
+    #github .all-repositories {
+        flex-direction: column; /* Stack repository items vertically */
+    }
+
+    #github .repository-item {
+        width: 100%; /* Full width for repository items */
+        margin: 10px 0; /* Adjust margin for better spacing */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    #github .repository-info h1 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    #github .repository-info h2 {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    #github .repository-info p {
+        font-size: 0.8rem; /* Adjust font size for mobile */
+        -webkit-line-clamp: 4; /* Adjust line clamp for better readability */
+    }
+
+    /* Contact Section */
+    #contact .contact-items {
+        width: 100%; /* Full width for contact items */
+        padding: 0 20px; /* Add padding for mobile */
+    }
+
+    #contact .contact-item {
+        width: 100%; /* Full width for contact items */
+        margin: 20px 0; /* Adjust margin for better spacing */
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+    #contact .contact-info h1 {
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    #contact .contact-info h2 {
+        font-size: 1.1rem; /* Adjust font size for mobile */
+    }
+
+    #new-contact h2 {
+        font-size: 1.8em; /* Adjust heading size for mobile */
+    }
+
+    .info-number {
+        font-size: 1.3em; /* Adjust font size for mobile */
+    }
+
+    .info-text {
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    .contact-form h2 {
+        font-size: 1.5em; /* Adjust form heading size */
+    }
+
+    button[type="submit"] {
+        padding: 12px 16px; /* Adjust button padding */
+        font-size: 0.9em; /* Adjust button font size */
+    }
+}
+
+/* For devices with a max width of 480px */
+@media (max-width: 480px) {
+
+    /* GitHub Section */
+    #github .repository-info h1 {
+        font-size: 1.3rem; /* Further reduce font size */
+    }
+
+    #github .repository-info h2 {
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+
+    #github .repository-info p {
+        font-size: 0.7rem; /* Further reduce font size */
+        -webkit-line-clamp: 3; /* Adjust line clamp for smaller screens */
+    }
+
+    /* Contact Section */
+    #contact .contact-info h1 {
+        font-size: 1.8rem; /* Further reduce font size */
+    }
+
+    #contact .contact-info h2 {
+        font-size: 1rem; /* Further reduce font size */
+    }
+
+    #new-contact h2 {
+        font-size: 1.6em; /* Further reduce heading size */
+    }
+
+    .info-number {
+        font-size: 1.2em; /* Further reduce font size */
+    }
+
+    .info-text {
+        font-size: 0.9em; /* Further reduce font size */
+    }
+
+    .contact-form h2 {
+        font-size: 1.4em; /* Further reduce form heading size */
+    }
+
+    button[type="submit"] {
+        padding: 10px 14px; /* Further reduce button padding */
+        font-size: 0.85em; /* Further reduce button font size */
+    }
+}
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+
+    /* Footer */
+    #footer .footer {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    #footer h2 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    #footer .social-icon {
+        display: flex;
+        flex-direction: row; /* Ensure icons are displayed horizontally */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Align items vertically centered */
+        margin-bottom: 10px; /* Adjust margin for spacing */
+    }
+
+    #footer .social-item {
+        height: 50px;
+        width: 50px;
+        margin: 0 10px; /* Adjust margin for better spacing */
+    }
+
+    #footer p {
+        font-size: 1rem; /* Adjust font size */
+        text-align: center; /* Center align text */
+    }
+}
+
+
+
+
+
+
+/* Media Query for Mobile Devices */
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+
+    
+
+
+
+
+
+    /* Projects Section */
+    #projects .project-item {
+        flex-direction: column; /* Stack project items vertically */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 20px 0; /* Add margin for better spacing */
+    }
+
+    #projects .project-info h1 {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    #projects .project-info h2 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    #projects .project-img {
+        height: 200px; /* Adjust image height for mobile */
+    }
+
+    /* About Section */
+    #about .about {
+        flex-direction: column; /* Stack about section vertically */
+        padding: 50px 20px; /* Adjust padding */
+    }
+
+    #about .col-left,
+    #about .col-right {
+        width: 100%; /* Full width for columns */
+        padding: 0; /* Remove padding */
+        text-align: center; /* Center text */
+    }
+
+    #about .col-left .about-img::after {
+        display: none; /* Hide decorative border on mobile */
+    }
+
+    #about .col-left {
+        margin-bottom: 20px; /* Add margin below the image */
+    }
+
+    /* Contact Section */
+    #contact .contact-items {
+        flex-direction: column; /* Stack contact items vertically */
+        width: 100%; /* Full width for contact items */
+    }
+
+    #contact .contact-item {
+        width: 100%; /* Full width for contact items */
+        margin: 20px 0; /* Add margin for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    #contact .contact-item .icon {
+        height: 60px; /* Adjust icon size */
+        width: 60px; /* Adjust icon size */
+    }
+
+    #contact .contact-item .contact-info h1 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    #contact .contact-item .contact-info h2 {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+}
+
+/* For devices with a max width of 480px */
+@media (max-width: 480px) {
+
+    /* Footer */
+    #footer h2 {
+        font-size: 1.3rem; /* Further reduce font size */
+    }
+
+    #footer p {
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+
+    /* Projects Section */
+    #projects .project-info h1 {
+        font-size: 2rem; /* Further reduce font size */
+    }
+
+    #projects .project-info h2 {
+        font-size: 1.2rem; /* Further reduce font size */
+    }
+
+    #projects .project-img {
+        height: 150px; /* Further reduce image height */
+    }
+
+    /* About Section */
+    #about .col-left,
+    #about .col-right {
+        text-align: center; /* Ensure text is centered on small screens */
+    }
+
+    #about .col-right h2 {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
+
+    /* Contact Section */
+    #contact .contact-item .icon {
+        height: 50px; /* Further reduce icon size */
+        width: 50px; /* Further reduce icon size */
+    }
+
+    #contact .contact-item .contact-info h1 {
+        font-size: 1.8rem; /* Further reduce font size */
+    }
+
+    #contact .contact-item .contact-info h2 {
+        font-size: 1rem; /* Further reduce font size */
+    }
+}
+
+
+/* Media Query for Mobile Devices */
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+
+    /* Registration Form */
+    #registration {
+        padding: 20px;
+        margin: 10px auto;
+    }
+  
+    #registration h2 {
+        font-size: 1.5rem;
+    }
+  
+    #registration .form-group input,
+    #registration .form-group select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    #registration button {
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+  
+    /* Dropdown Menu */
+    .dropdown-content {
+        min-width: 200px; /* Reduce width for smaller screens */
+        top: 50px; /* Adjust positioning */
+    }
+
+    .dropbtn {
+        padding: 14px;
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .dropdown-content a {
+        padding: 12px 20px; /* Adjust padding */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    /* About Section */
+    #about .about {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    #about .col-left,
+    #about .col-right {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #about .col-left {
+        padding-left: 0;
+    }
+
+    #about .col-right h1 {
+        font-size: 2rem; /* Adjust font size */
+    }
+  
+    /* Testimonials Section */
+    #testimonials {
+        padding: 30px 10px;
+    }
+  
+    #testimonials h2 {
+        font-size: 2rem;
+    }
+  
+    .testimonials-container {
+        flex-direction: column;
+    }
+  
+    .testimonial {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px; /* Add margin for better spacing */
+    }
+
+    .testimonial-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .testimonial p {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .testimonial-details h4 {
+        font-size: 1rem;
+    }
+}
+
+/* For devices with a max width of 480px */
+@media (max-width: 480px) {
+
+    /* Registration Form */
+    #registration {
+        padding: 15px;
+    }
+
+    #registration h2 {
+        font-size: 1.2rem;
+    }
+
+    #registration .form-group input,
+    #registration .form-group select {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    #registration button {
+        padding: 8px 0;
+        font-size: 0.8rem;
+    }
+
+    /* Dropdown Menu */
+    .dropbtn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .dropdown-content {
+        min-width: 150px;
+    }
+
+    .dropdown-content a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* About Section */
+    #about .col-right h1 {
+        font-size: 1.8rem;
+    }
+
+    #about .col-right p {
+        font-size: 0.9rem;
+    }
+
+    /* Testimonials Section */
+    #testimonials h2 {
+        font-size: 1.8rem;
+    }
+
+    .testimonial-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .testimonial p {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-details h3 {
+        font-size: 1rem;
+    }
+
+    .testimonial-details h4 {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <title>Portfolio</title>
+
+<script>
+
+  // script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.dropbtn').addEventListener('click', function() {
+        document.querySelector('.dropdown-content').classList.toggle('show');
+    });
+});
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+  </script>
+
+
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="index.html"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="index.html" data-after="Home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="github.html">GitHub</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>Huzaifa <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+        <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+              <a href="about.html">About</a>
+              <a href="project.html">Projects</a>
+              <a href="services.html">Services</a>
+              <a href="github.html">GitHub</a>
+              <a href="Certification.html">Certification</a>
+              <a href="testi.html">Testimonials</a>
+              <a href="contact.html">Contacts</a>
+          </div>
+      </div>
+      
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+<section id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonials-container">
+    <div class="testimonial">
+      <img src="images/muneeb.jpg" alt="Muhammad Muneeb" class="testimonial-image">
+      <div class="testimonial-content">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Curabitur sed lacinia risus. Aliquam erat volutpat. Ut ac lorem eu justo sodales ultrices."</p>
+        <div class="testimonial-details">
+          <h3>Muhammad Muneeb</h3>
+          <h4>CEO, SkillzUp</h4>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <img src="images/zeeshan.jpg" alt="Zeeshan Asad" class="testimonial-image">
+      <div class="testimonial-content">
+        <p>"Mauris sit amet massa vitae tortor condimentum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin et purus a nulla bibendum tincidunt."</p>
+        <div class="testimonial-details">
+          <h3>Zeeshan Asad</h3>
+          <h4>CTO, SkillsWiz</h4>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <img src="images/noor.jpg" alt="Noor Ul Haq" class="testimonial-image">
+      <div class="testimonial-content">
+        <p>"Aliquam eget pharetra metus. In tristique nisl vitae tortor feugiat, a dictum arcu cursus. Donec sollicitudin nisi nec nisi dictum, non interdum ligula fringilla."</p>
+        <div class="testimonial-details">
+          <h3>Noor Ul Haq</h3>
+          <h4>Manager, OTS</h4>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <img src="images/muneeb.jpg" alt="Muhammad Muneeb" class="testimonial-image">
+      <div class="testimonial-content">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Curabitur sed lacinia risus. Aliquam erat volutpat. Ut ac lorem eu justo sodales ultrices."</p>
+        <div class="testimonial-details">
+          <h3>Muhammad Muneeb</h3>
+          <h4>CEO, SkillsUp</h4>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <img src="images/zeeshan.jpg" alt="Zeeshan Asad" class="testimonial-image">
+      <div class="testimonial-content">
+        <p>"Mauris sit amet massa vitae tortor condimentum lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin et purus a nulla bibendum tincidunt."</p>
+        <div class="testimonial-details">
+          <h3>Zeeshan Asad</h3>
+          <h4>CTO, SkillsWiz</h4>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <img src="images/noor.jpg" alt="Noor Ul Haq" class="testimonial-image">
+      <div class="testimonial-content">
+        <p>"Aliquam eget pharetra metus. In tristique nisl vitae tortor feugiat, a dictum arcu cursus. Donec sollicitudin nisi nec nisi dictum, non interdum ligula fringilla."</p>
+        <div class="testimonial-details">
+          <h3>Noor Ul Haq</h3>
+          <h4>Manager, OTS</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+   <!-- Footer -->
+   <section id="footer">
+    <div class="footer container">
+      <div class="brand"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></div>
+      <h2>Your Cyber Security Consultant</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.facebook.com/ahnaf.honey/"><img src="images/fb.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/shorttemperd007/"><img src="images/insta.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://twitter.com/ShortTemperd007"><img src="images/x2.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.linkedin.com/in/muhammad-huzaifa-anjum-a80aa0279/"><img src="images/link.png"/></a>
+        </div>
+      </div>
+      <p>Copyright © 2021 Huzaifa. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+</html>

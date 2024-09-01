@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <title>Portfolio</title>
+  <script>
+
+    // script.js
+  
+  document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.dropbtn').addEventListener('click', function() {
+          document.querySelector('.dropdown-content').classList.toggle('show');
+      });
+  });
+  
+  window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+              }
+          }
+      }
+  }
+    </script>
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="index.html"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="index.html" data-after="Home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="github.html">GitHub</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+            
+          </ul>
+          
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>Huzaifa <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+        <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+              <a href="about.html">About</a>
+              <a href="project.html">Projects</a>
+              <a href="services.html">Services</a>
+              <a href="github.html">GitHub</a>
+              <a href="Certification.html">Certification</a>
+              <a href="testi.html">Testimonials</a>
+              <a href="contact.html">Contacts</a>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+
+<!-- About Section -->
+<section id="about">
+  <div class="about container">
+    <div class="col-left">
+      <div class="about-img">
+        <img src="images/huzi3.jpg" alt="img">
+      </div>
+    </div>
+    <div class="col-right">
+      <h1 class="section-title">About <span>me</span></h1>
+      <h2>Ethical Hacker| Cyber Security Consultant</h2>
+      <p>👋 Hi, I’m @Muhammad-Huzaifa
+        👀 I’m interested in Cyber Security and Ethical Hacking
+        🌱 I’m currently learning more about cyber security and Ethical Hacking
+        I am a highly motivated and skilled cyber security student with a passion for ethical hacking. I am currently pursuing a degree in Cyber Security and have acquired extensive knowledge in areas such as Ethical Hacking and penetration testing. I also have hands-on experience in performing vulnerability assessments and identifying security flaws in computer systems. Moreover I am learning about network security and other paramters related to it as it is very important for "Ethical Hacking"..</p>
+      <a    href="https://raw.githubusercontent.com/ShortTemperd007/Resume/814b2b35675553d4bceee1735fdb8e00fd9d5496/Muhammad%20Huzaifa.pdf" class="cta">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+ <!-- Footer -->
+ <section id="footer">
+  <div class="footer container">
+    <div class="brand"><h1><span>M</span>uhammad <span>H</span>uzaifa</h1></div>
+    <h2>Your Cyber Security Consultant</h2>
+    <div class="social-icon">
+      <div class="social-item">
+        <a href="https://www.facebook.com/ahnaf.honey/"><img src="images/fb.png"/></a>
+      </div>
+      <div class="social-item">
+        <a href="https://www.instagram.com/shorttemperd007/"><img src="images/insta.png"/></a>
+      </div>
+      <div class="social-item">
+        <a href="https://twitter.com/ShortTemperd007"><img src="images/x2.png"/></a>
+      </div>
+      <div class="social-item">
+        <a href="https://www.linkedin.com/in/muhammad-huzaifa-anjum-a80aa0279/"><img src="images/link.png"/></a>
+      </div>
+    </div>
+    <p>Copyright © 2021 Huzaifa. All rights reserved</p>
+  </div>
+</section>
+<!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+</html>
