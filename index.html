@@ -115,84 +115,86 @@ window.onclick = function(event) {
 
 
 
+ <!-- Projects Section -->
+ <section id="projects">
+  <h1 class="section-title">Latest <span>Projects</span></h1>
 
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Latest <span>Projects</span></h1>
-      </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Cryptography</h1>
-            <h2></h2>
-            <p>This project is a GUI application for encrypting and decrypting text using various cryptographic ciphers. The supported ciphers are:</p>
-            <p>AES (Advanced Encryption Standard)<br>
-            DES (Data Encryption Standard)<br>
-            Caesar Cipher<br>
-            Vigenere Cipher<br>
-            Substitution Cipher<br>
-            RSA (Rivest–Shamir–Adleman)</p>
-          </div>
-          <div class="project-img">
-            <img src="images/cypto.jpeg" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Multi Factor Authentication</h1>
-         
-            <p>A python based application for Applying Multifactor authentication
-
-              Two-Factor Authentication System
-              
-              This Python application provides a two-factor authentication (2FA) system with registration, login, and password reset functionalities using Tkinter for the GUI. Key features include:
-              
-              User Registration: Collects user information (name, email, password) and generates a QR code for 2FA setup. Login: Validates user credentials and sends a one-time password (OTP) to the user's email for secure login. Password Reset: Allows users to reset their password after verification. Enhanced Security: Utilizes encryption for storing passwords and OTPs.</p>
-          </div>
-          <div class="project-img">
-            <img src="images/2fa.jpeg" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Email Encryption</h1>
-            
-            <p>This Python application allows you to send and receive encrypted emails using the cryptography library. It features a Tkinter-based GUI for a user-friendly experience, including functionalities to:
-
-              Generate and manage encryption keys: Automatically creates and saves an encryption key for secure email communications. Encrypt and send emails: Encrypts the message body before sending via SMTP, with support for Gmail's SMTP and IMAP servers. Receive and decrypt emails: Connects to Gmail's IMAP server to fetch and decrypt received emails. User authentication: Saves email credentials securely using pickle to avoid repeated logins. </p>
-          </div>
-          <div class="project-img">
-            <img src="images/images.jpeg" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Smart Dictionary</h1>
-           
-            <p>A Smart python code for A smart Dictionary
-
-              This code creates a simple GUI application using Tkinter for a Smart Dictionary. The dictionary allows users to add, search, update, and delete words along with their definitions. The application uses SQLite to store word-definition pairs in a database.</p>
-          </div>
-          <div class="project-img">
-            <img src="images/dictionary.jpg" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Website Designing</h1>
-            
-            <p>Web development involves creating and maintaining websites and web applications. Web developers use various programming languages and frameworks to build responsive, user-friendly, and functional websites. Web development services include front-end and back-end development, website design, e-commerce solutions, content management systems, and website optimization.</p>
-          </div>
-          <div class="project-img">
-            <img src="images/web2.jpg" alt="img">
-          </div>
-        </div>
-      </div>
+    <div class="projects-header">
+      
     </div>
+    <div class="all-projects">
+      <!-- Project Item -->
+      <div class="project-item">
+        <div class="project-info">
+          <h1>Cryptography</h1>
+          <p>This project is a GUI application for encrypting and decrypting text using various cryptographic ciphers. The supported ciphers are:</p>
+          <ul>
+            <li>AES (Advanced Encryption Standard)</li>
+            <li>DES (Data Encryption Standard)</li>
+            <li>Caesar Cipher</li>
+            <li>Vigenere Cipher</li>
+            <li>Substitution Cipher</li>
+            <li>RSA (Rivest–Shamir–Adleman)</li>
+          </ul>
+        </div>
+        <div class="project-img">
+          <img src="images/cypto.jpeg" alt="Cryptography">
+        </div>
+      </div>
+
+      <!-- Project Item -->
+      <div class="project-item">
+        <div class="project-info">
+          <h1>Multi-Factor Authentication</h1>
+          <p>A Python-based application for implementing two-factor authentication (2FA). Key features include:</p>
+          <ul>
+            <li>User Registration: Collects user info and generates a QR code for 2FA setup.</li>
+            <li>Login: Validates credentials and sends OTP via email.</li>
+            <li>Password Reset: Allows users to reset passwords after verification.</li>
+            <li>Enhanced Security: Encrypts passwords and OTPs.</li>
+          </ul>
+        </div>
+        <div class="project-img">
+          <img src="images/2fa.jpeg" alt="Multi-Factor Authentication">
+        </div>
+      </div>
+
+      <!-- Project Item -->
+      <div class="project-item">
+        <div class="project-info">
+          <h1>Email Encryption</h1>
+          <p>A Python application for sending and receiving encrypted emails. Features include:</p>
+          <ul>
+            <li>Encryption Key Management: Automatically creates and saves keys.</li>
+            <li>Encrypt and Send Emails: Uses Gmail's SMTP server.</li>
+            <li>Receive and Decrypt Emails: Fetches emails via IMAP.</li>
+            <li>User Authentication: Saves credentials securely.</li>
+          </ul>
+        </div>
+        <div class="project-img">
+          <img src="images/images.jpeg" alt="Email Encryption">
+        </div>
+      </div>
+
+      <!-- Project Item -->
+      <div class="project-item">
+        <div class="project-info">
+          <h1>Smart Dictionary</h1>
+          <p>A Tkinter-based GUI application for a smart dictionary. Features include:</p>
+          <ul>
+            <li>Add, search, update, and delete words with definitions.</li>
+            <li>SQLite database for storing word-definition pairs.</li>
+            <li>User-friendly interface for managing vocabulary.</li>
+          </ul>
+        </div>
+        <div class="project-img">
+          <img src="images/dictionary.jpg" alt="Smart Dictionary">
+        </div>
+      </div>
+
+
   </section>
+  <a href="project.html">Show More</a>
   <!-- End Projects Section -->
 
   <!-- Service Section -->
@@ -225,6 +227,12 @@ window.onclick = function(event) {
           <h2>Web Design</h2>
           <p>Web development involves creating and maintaining websites and web applications. Web developers use various programming languages and frameworks to build responsive, user-friendly, and functional websites. Web development services include front-end and back-end development, website design, e-commerce solutions, content management systems, and website optimization.</p>
         </div>
+        <div class="service-bottom">
+          <div class="service-item">
+            
+            <h2>Software development</h2>
+            <p>"Proficient in developing software using Python, leveraging its versatility for web development, data analysis, automation, and AI applications. Skilled in writing efficient, scalable, and maintainable code to solve complex problems." They use their skills to protect systems and data by performing penetration tests, security assessments, and vulnerability scans. Ethical hackers ensure that systems are secure from malicious attacks and breaches.</p>
+          </div>
       </div>
     </div>
   </section>
@@ -311,7 +319,10 @@ window.onclick = function(event) {
             </div>
         </div>
     </div>
+    <a href="Certification.html">Show More</a>
 </section>
+
+
 
 
 
